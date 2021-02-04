@@ -111,4 +111,4 @@ Foreach ($SharedMailbox in $SharedMailboxes)
 }
 
 #Exports the results:
-$Global:Records | select Identity,user,@{name='AccessRights';Expression={[string]::join(";",($_.accessrights))}} |Export-Csv $OutputFile
+$Global:Records | select Identity,user,@{name='AccessRights';Expression={[string]::join(";",($_.accessrights))}} |Export-Csv $OutputFile -NoTypeInformation
